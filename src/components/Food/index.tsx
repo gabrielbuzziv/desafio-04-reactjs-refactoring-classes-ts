@@ -19,7 +19,7 @@ interface FoodProps {
   handleDelete: (foodId: number) => void;
 }
 
-function Food({ food, handleEditFood, handleDelete }: FoodProps) {
+function FoodComponent({ food, handleEditFood, handleDelete }: FoodProps) {
   const [isAvailable, setIsAvailable] = useState(food.available);
 
   async function toggleAvailable() {
@@ -87,4 +87,4 @@ function Food({ food, handleEditFood, handleDelete }: FoodProps) {
   );
 }
 
-export default Food;
+export default FoodComponent;

@@ -1,7 +1,21 @@
 import styled from 'styled-components';
 import { Form as Unform } from '@unform/web';
 
-export const Form = styled(Unform)`
+interface Food {
+  id: number;
+  name: string;
+  description: string;
+  image: string;
+  price: number;
+  available: boolean;
+}
+
+interface FormProps {
+  ref: any;
+  initialData: Food;
+}
+
+export const Form = styled(Unform)<FormProps>`
   padding: 48px 40px;
   display: flex;
   flex-direction: column;
